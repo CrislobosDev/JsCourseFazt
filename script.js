@@ -92,6 +92,33 @@
 //     return a + b;
 // } // Arrow function, es una forma mas corta de escribir una funcion
 
-const showText = () => 'Hola Mundo'; // Arrow function sin parametros, devuelve un string
+// const showText = () => 'Hola Mundo'; // Arrow function sin parametros, devuelve un string
 
-console.log(showText());
+// console.log(showText());
+
+// ______________________________________________________________________
+ 
+// Object en arrow function (El objeto se debe encerrar entre parentesis para que JS lo interprete como un objeto y no como un bloque de codigo)
+
+// const showObject = () => ({name: 'cris'})
+
+// console.log(showObject()); 
+
+// __________________________________________________________________
+
+// Return en funciones 
+
+const button = document.createElement("button"); // Crea un elemento button
+button.innerText = 'Click me'; // Cambia el texto del elemento button
+
+const isAuthorized = false;
+
+button.addEventListener("click", () => {
+    if (isAuthorized) {
+        return alert('Bienevenido al sistema');
+    }
+
+    alert('No autorizado')
+})
+
+document.body.append(button);
